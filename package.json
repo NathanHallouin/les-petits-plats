@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i styles.css -o ./dist/styles.css --watch",
+    "start": "live-server --watch=dist"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

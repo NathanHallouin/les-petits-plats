@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-anton {
+  font-family: "Anton", sans-serif;
+}
+
+/* section cards */
+.max-w {
+  width: 90%;
+}
+
+.cards article {
+  background-color: white;
+  border-radius: 26px;
+}
+
+.recette-texte {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.liste-ingredients span {
+  display: flex;
+  flex-direction: column;
+}
+.span-quantite-unite {
+  color: rgba(122, 122, 122, 1);
+}
+
+/* filtre */
+.dropdown-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.dropdown-input:focus {
+  outline: none;
+}
+
+.custom-list-item:hover {
+  background-color: var(--yellow-color);
+  cursor: pointer;
+}

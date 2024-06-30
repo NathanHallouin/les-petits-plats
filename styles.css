@@ -6,6 +6,10 @@
   font-family: "Manrope", sans-serif;
 }
 
+br {
+  margin: 20px 20px !important;
+}
+
 .font-anton {
   font-family: "Anton", sans-serif;
 }

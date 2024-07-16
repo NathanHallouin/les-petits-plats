@@ -19,6 +19,9 @@ export class Dropdown {
     this.filters = [];
   }
 
+  /**
+   * @brief Show the dropdown
+   */
   open() {
     if (this.opened) {
       this.contentElement.style.display = "none";
@@ -31,12 +34,18 @@ export class Dropdown {
     }
   }
 
+  /**
+   * @brief Close the dropdown
+   */
   close() {
     this.contentElement.style.display = "none";
     this.opened = false;
     this.arrowDropDown();
   }
 
+  /**
+   * @brief Change arrow icon when dropdown is opened or closed
+   */
   arrowDropDown() {
     if (!this.opened) {
       this.arrowDownIcon.classList.remove("hidden");

@@ -1,6 +1,6 @@
 export const createArticle = (data) => {
   const containerArticles = document.querySelector(".cards");
-  const { id, name, ingredients, description, image, time } = data;
+  const { name, ingredients, description, image, time } = data;
   const article = document.createElement("article");
   article.classList.add("relative");
   const imagePlat = document.createElement("img");

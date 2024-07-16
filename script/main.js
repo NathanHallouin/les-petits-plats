@@ -13,8 +13,6 @@ const updateNbRecettes = document.querySelector(".nb-recettes");
 const containerArticles = document.querySelector(".cards");
 const errorMessage = document.querySelector(".error-message");
 
-let allIngredients;
-
 /**
  * @brief Fonction pour afficher les recettes filtrées
  * @param {*} filteredRecipes
@@ -190,6 +188,7 @@ function main() {
         updateFilters(recipes);
       });
 
+      //TODO : regex pour retirer les caractères spéciaux
       const inputValue = inputSearchBar.value.toLowerCase();
 
       if (inputValue.length < 3) {

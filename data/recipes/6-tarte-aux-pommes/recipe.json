@@ -1,0 +1,34 @@
+{
+  "id": 6,
+  "name": "Tarte aux pommes",
+  "servings": 6,
+  "ingredients": [
+    {
+      "ingredient": "Pâte brisée",
+      "quantity": 1
+    },
+    {
+      "ingredient": "Pommes",
+      "quantity": 6
+    },
+    {
+      "ingredient": "Sucre",
+      "quantity": 50,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Beurre",
+      "quantity": 30,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Cannelle",
+      "quantity": 1,
+      "unit": "cuillère à café"
+    }
+  ],
+  "time": 60,
+  "description": "Préchauffer le four à 180°C. Étaler la pâte brisée dans un moule à tarte. Éplucher et couper les pommes en tranches. Disposer les tranches de pommes sur la pâte. Saupoudrer de sucre et de cannelle. Parsemer de petits morceaux de beurre. Enfourner pendant 45 minutes jusqu'à ce que la tarte soit dorée.",
+  "appliance": "Four",
+  "ustensils": ["moule à tarte", "couteau", "économe"]
+}

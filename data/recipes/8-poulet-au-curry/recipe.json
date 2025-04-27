@@ -1,0 +1,44 @@
+{
+  "id": 8,
+  "name": "Poulet au curry",
+  "servings": 4,
+  "ingredients": [
+    {
+      "ingredient": "Blancs de poulet",
+      "quantity": 4
+    },
+    {
+      "ingredient": "Oignon",
+      "quantity": 1
+    },
+    {
+      "ingredient": "Ail",
+      "quantity": 2,
+      "unit": "gousses"
+    },
+    {
+      "ingredient": "Lait de coco",
+      "quantity": 400,
+      "unit": "ml"
+    },
+    {
+      "ingredient": "Curry en poudre",
+      "quantity": 2,
+      "unit": "cuillères à soupe"
+    },
+    {
+      "ingredient": "Huile d'olive",
+      "quantity": 1,
+      "unit": "cuillère à soupe"
+    },
+    {
+      "ingredient": "Riz",
+      "quantity": 300,
+      "unit": "g"
+    }
+  ],
+  "time": 30,
+  "description": "Couper les blancs de poulet en morceaux. Émincer l'oignon et hacher l'ail. Dans une poêle, faire chauffer l'huile et faire revenir l'oignon et l'ail. Ajouter le poulet et le faire dorer. Saupoudrer de curry et mélanger. Verser le lait de coco, saler, poivrer et laisser mijoter 15 minutes. Servir avec du riz blanc.",
+  "appliance": "Poêle",
+  "ustensils": ["couteau", "planche à découper", "cuillère en bois"]
+}

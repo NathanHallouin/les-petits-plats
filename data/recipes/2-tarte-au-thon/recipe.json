@@ -1,0 +1,34 @@
+{
+  "id": 2,
+  "name": "Tarte au thon",
+  "servings": 4,
+  "ingredients": [
+    {
+      "ingredient": "Pâte brisée",
+      "quantity": 1
+    },
+    {
+      "ingredient": "Thon en boîte",
+      "quantity": 200,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Oeufs",
+      "quantity": 3
+    },
+    {
+      "ingredient": "Crème fraîche",
+      "quantity": 20,
+      "unit": "cl"
+    },
+    {
+      "ingredient": "Gruyère râpé",
+      "quantity": 100,
+      "unit": "g"
+    }
+  ],
+  "time": 45,
+  "description": "Étaler la pâte brisée dans un moule à tarte. Égoutter le thon et l'émietter sur le fond de tarte. Battre les œufs avec la crème fraîche, saler et poivrer. Verser sur le thon, parsemer de gruyère râpé. Enfourner à 180°C pendant 30 minutes.",
+  "appliance": "Four",
+  "ustensils": ["moule à tarte", "fouet", "bol"]
+}

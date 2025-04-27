@@ -1,0 +1,40 @@
+{
+  "id": 7,
+  "name": "Soupe à l'oignon",
+  "servings": 4,
+  "ingredients": [
+    {
+      "ingredient": "Oignons",
+      "quantity": 4
+    },
+    {
+      "ingredient": "Beurre",
+      "quantity": 50,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Farine",
+      "quantity": 2,
+      "unit": "cuillères à soupe"
+    },
+    {
+      "ingredient": "Bouillon de bœuf",
+      "quantity": 1,
+      "unit": "litre"
+    },
+    {
+      "ingredient": "Pain",
+      "quantity": 4,
+      "unit": "tranches"
+    },
+    {
+      "ingredient": "Gruyère râpé",
+      "quantity": 100,
+      "unit": "g"
+    }
+  ],
+  "time": 45,
+  "description": "Émincer les oignons et les faire revenir dans le beurre jusqu'à ce qu'ils soient dorés. Ajouter la farine et mélanger. Verser le bouillon et laisser mijoter 30 minutes. Servir dans des bols avec une tranche de pain grillé et du gruyère râpé. Passer au four pour gratiner quelques minutes.",
+  "appliance": "Casserole",
+  "ustensils": ["louche", "couteau", "planche à découper"]
+}

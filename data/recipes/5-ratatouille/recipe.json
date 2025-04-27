@@ -1,0 +1,41 @@
+{
+  "id": 5,
+  "name": "Ratatouille",
+  "servings": 4,
+  "ingredients": [
+    {
+      "ingredient": "Aubergines",
+      "quantity": 2
+    },
+    {
+      "ingredient": "Courgettes",
+      "quantity": 2
+    },
+    {
+      "ingredient": "Poivrons",
+      "quantity": 3
+    },
+    {
+      "ingredient": "Tomates",
+      "quantity": 4
+    },
+    {
+      "ingredient": "Oignon",
+      "quantity": 2
+    },
+    {
+      "ingredient": "Ail",
+      "quantity": 3,
+      "unit": "gousses"
+    },
+    {
+      "ingredient": "Huile d'olive",
+      "quantity": 4,
+      "unit": "cuillères à soupe"
+    }
+  ],
+  "time": 60,
+  "description": "Couper tous les légumes en dés. Dans une cocotte, faire revenir les oignons avec l'huile d'olive. Ajouter l'ail, puis les poivrons, les courgettes et les aubergines. Laisser mijoter 10 min puis ajouter les tomates. Couvrir et laisser mijoter à feu doux pendant 45 minutes. Saler, poivrer et ajouter des herbes de Provence.",
+  "appliance": "Cocotte",
+  "ustensils": ["couteau", "planche à découper", "cuillère en bois"]
+}

@@ -1,0 +1,39 @@
+{
+  "id": 4,
+  "name": "Tiramisu",
+  "servings": 6,
+  "ingredients": [
+    {
+      "ingredient": "Mascarpone",
+      "quantity": 250,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Café fort",
+      "quantity": 200,
+      "unit": "ml"
+    },
+    {
+      "ingredient": "Biscuits à la cuillère",
+      "quantity": 24
+    },
+    {
+      "ingredient": "Oeufs",
+      "quantity": 3
+    },
+    {
+      "ingredient": "Sucre",
+      "quantity": 70,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Cacao en poudre",
+      "quantity": 1,
+      "unit": "cuillère à soupe"
+    }
+  ],
+  "time": 30,
+  "description": "Séparer les blancs des jaunes d'œufs. Mélanger les jaunes avec le sucre jusqu'à blanchiment, ajouter le mascarpone. Monter les blancs en neige et les incorporer délicatement. Tremper rapidement les biscuits dans le café et les disposer dans le plat. Couvrir de crème, puis répéter l'opération. Terminer par une couche de crème et saupoudrer de cacao. Réfrigérer au moins 4h.",
+  "appliance": "Réfrigérateur",
+  "ustensils": ["batteur électrique", "plat à gratin", "casserole"]
+}

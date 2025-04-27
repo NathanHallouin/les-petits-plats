@@ -1,0 +1,34 @@
+{
+  "id": 3,
+  "name": "Salade César",
+  "servings": 2,
+  "ingredients": [
+    {
+      "ingredient": "Laitue romaine",
+      "quantity": 1
+    },
+    {
+      "ingredient": "Blanc de poulet",
+      "quantity": 1
+    },
+    {
+      "ingredient": "Parmesan",
+      "quantity": 50,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Croûtons",
+      "quantity": 100,
+      "unit": "g"
+    },
+    {
+      "ingredient": "Sauce César",
+      "quantity": 3,
+      "unit": "cuillères à soupe"
+    }
+  ],
+  "time": 20,
+  "description": "Laver et essorer la salade, la couper en morceaux. Cuire le blanc de poulet et le couper en dés. Dans un saladier, mélanger la salade, le poulet et les croûtons. Ajouter la sauce César et parsemer de parmesan râpé.",
+  "appliance": "Poêle",
+  "ustensils": ["saladier", "couteau", "planche à découper"]
+}

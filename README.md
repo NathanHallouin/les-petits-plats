@@ -64,6 +64,27 @@ Telechargez la derniere version APK depuis la page [Releases](https://github.com
 
 L'application iOS est disponible via TestFlight. Consultez la page [Releases](https://github.com/NathanHallouin/les-petits-plats/releases) pour les instructions.
 
+## Builds et Releases
+
+Les builds iOS et Android sont automatises via GitHub Actions et EAS Build.
+
+### Creer une release
+
+```bash
+# Creer un tag de version
+git tag -a v1.0.0 -m "Version 1.0.0"
+git push origin v1.0.0
+```
+
+Le workflow va automatiquement :
+1. Builder l'APK Android
+2. Builder l'IPA iOS
+3. Creer une release GitHub avec les artefacts
+
+### Configuration requise
+
+Pour activer les builds automatiques, suivez le guide [SETUP_RELEASES.md](SETUP_RELEASES.md).
+
 ## Stack technique
 
 - **Framework**: React Native + Expo

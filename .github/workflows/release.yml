@@ -4,11 +4,26 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Platform to build'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - android
+          - ios
+
+env:
+  EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
 jobs:
   build-android:
     name: Build Android APK
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.platform == 'all' || github.event.inputs.platform == 'android' || github.event_name == 'push' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,17 +44,23 @@ jobs:
         run: npm ci
 
       - name: Build Android APK
-        run: eas build --platform android --profile production --non-interactive --local
+        run: eas build --platform android --profile production --non-interactive
+
+      - name: Download APK
+        run: |
+          BUILD_URL=$(eas build:list --platform android --limit 1 --json --non-interactive | jq -r '.[0].artifacts.buildUrl')
+          curl -L -o les-petits-plats.apk "$BUILD_URL"
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: android-apk
-          path: build-*.apk
+          path: les-petits-plats.apk
 
   build-ios:
     name: Build iOS
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.platform == 'all' || github.event.inputs.platform == 'ios' || github.event_name == 'push' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -60,18 +81,24 @@ jobs:
         run: npm ci
 
       - name: Build iOS
-        run: eas build --platform ios --profile production --non-interactive --local
+        run: eas build --platform ios --profile production --non-interactive
+
+      - name: Download IPA
+        run: |
+          BUILD_URL=$(eas build:list --platform ios --limit 1 --json --non-interactive | jq -r '.[0].artifacts.buildUrl')
+          curl -L -o les-petits-plats.ipa "$BUILD_URL"
 
       - name: Upload iOS artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ios-build
-          path: build-*.ipa
+          name: ios-ipa
+          path: les-petits-plats.ipa
 
   release:
     name: Create Release
     needs: [build-android, build-ios]
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
     permissions:
       contents: write
     steps:
@@ -84,10 +111,10 @@ jobs:
           name: android-apk
           path: ./artifacts
 
-      - name: Download iOS build
+      - name: Download iOS IPA
         uses: actions/download-artifact@v4
         with:
-          name: ios-build
+          name: ios-ipa
           path: ./artifacts
 
       - name: Get version from tag
@@ -95,22 +122,27 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
 
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-          name: Release ${{ steps.version.outputs.VERSION }}
+          name: Les Petits Plats ${{ steps.version.outputs.VERSION }}
           body: |
             ## Les Petits Plats ${{ steps.version.outputs.VERSION }}
 
-            ### Telechargements
+            ### Installation
 
-            - **Android**: Telechargez le fichier `.apk` ci-dessous et installez-le sur votre appareil
-            - **iOS**: Le fichier `.ipa` est disponible pour installation via TestFlight ou Xcode
+            **Android**
+            1. Telechargez `les-petits-plats.apk`
+            2. Autorisez l'installation d'applications inconnues
+            3. Installez l'APK
 
-            ### Nouveautes
+            **iOS**
+            1. Telechargez `les-petits-plats.ipa`
+            2. Installez via Xcode, Apple Configurator ou un service de distribution
 
-            Consultez le [CHANGELOG](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) pour la liste complete des modifications.
+            ### Changelog
+            Voir [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
           files: |
-            ./artifacts/*.apk
-            ./artifacts/*.ipa
+            ./artifacts/les-petits-plats.apk
+            ./artifacts/les-petits-plats.ipa
           draft: false
           prerelease: false

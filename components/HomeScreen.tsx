@@ -15,7 +15,7 @@ export const HomeScreen = () => {
     appliance: undefined,
   });
 
-  // Extraction dynamique des ustensiles et appareils
+  // Dynamic extraction of utensils and appliances
   const ustensils = useMemo(() => {
     const set = new Set<string>();
     recipes.forEach((r) => r.ustensils.forEach((u) => set.add(u)));
@@ -28,7 +28,7 @@ export const HomeScreen = () => {
     return Array.from(set).sort();
   }, []);
 
-  // Filtrage des recettes
+  // Recipe filtering
   const filtered = useMemo(() => {
     return recipes.filter((r) => {
       const searchLower = search.toLowerCase();

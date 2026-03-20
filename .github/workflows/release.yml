@@ -131,16 +131,16 @@ jobs:
             ### Installation
 
             **Android**
-            1. Telechargez `les-petits-plats.apk`
-            2. Autorisez l'installation d'applications inconnues
-            3. Installez l'APK
+            1. Download `les-petits-plats.apk`
+            2. Allow installation from unknown sources
+            3. Install the APK
 
             **iOS**
-            1. Telechargez `les-petits-plats.ipa`
-            2. Installez via Xcode, Apple Configurator ou un service de distribution
+            1. Download `les-petits-plats.ipa`
+            2. Install via Xcode, Apple Configurator, or a distribution service
 
             ### Changelog
-            Voir [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
+            See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
           files: |
             ./artifacts/les-petits-plats.apk
             ./artifacts/les-petits-plats.ipa

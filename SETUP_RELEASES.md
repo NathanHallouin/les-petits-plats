@@ -1,74 +1,74 @@
-# Configuration des Releases iOS et Android
+# iOS and Android Release Configuration
 
-Ce guide explique comment configurer les builds automatiques pour iOS et Android.
+This guide explains how to set up automatic builds for iOS and Android.
 
-## Prerequis
+## Prerequisites
 
-1. Un compte [Expo](https://expo.dev/signup) (gratuit)
-2. Acces au repository GitHub
+1. An [Expo](https://expo.dev/signup) account (free)
+2. Access to the GitHub repository
 
-## Etape 1 : Connexion a Expo
+## Step 1: Log in to Expo
 
 ```bash
-# Installer EAS CLI globalement
+# Install EAS CLI globally
 npm install -g eas-cli
 
-# Se connecter a Expo
+# Log in to Expo
 eas login
 ```
 
-## Etape 2 : Configurer le projet EAS
+## Step 2: Configure the EAS Project
 
 ```bash
-# Initialiser EAS dans le projet
+# Initialize EAS in the project
 eas build:configure
 ```
 
-Cela va :
-- Creer/mettre a jour `eas.json`
-- Enregistrer le projet sur Expo
-- Configurer les identifiants de build
+This will:
+- Create/update `eas.json`
+- Register the project on Expo
+- Configure build credentials
 
-## Etape 3 : Configurer le token Expo sur GitHub
+## Step 3: Configure Expo Token on GitHub
 
-1. Aller sur [expo.dev/settings/access-tokens](https://expo.dev/settings/access-tokens)
-2. Creer un nouveau token (Robot Users > Create Token)
-3. Copier le token
-4. Aller dans les settings du repo GitHub
-5. Aller dans **Secrets and variables > Actions**
-6. Creer un nouveau secret nomme `EXPO_TOKEN` avec le token copie
+1. Go to [expo.dev/settings/access-tokens](https://expo.dev/settings/access-tokens)
+2. Create a new token (Robot Users > Create Token)
+3. Copy the token
+4. Go to the GitHub repo settings
+5. Navigate to **Secrets and variables > Actions**
+6. Create a new secret named `EXPO_TOKEN` with the copied token
 
-## Etape 4 : Configurer les credentials iOS (optionnel)
+## Step 4: Configure iOS Credentials (Optional)
 
-Pour les builds iOS de production, vous devez configurer :
+For production iOS builds, you need to configure:
 
 ```bash
-# Configurer les credentials iOS
+# Configure iOS credentials
 eas credentials
 ```
 
-Vous aurez besoin :
-- Apple Developer Account ($99/an)
+You will need:
+- Apple Developer Account ($99/year)
 - App Store Connect API Key
 - Distribution Certificate
 - Provisioning Profile
 
-EAS peut gerer ces credentials automatiquement.
+EAS can manage these credentials automatically.
 
-## Etape 5 : Lancer un build
+## Step 5: Start a Build
 
 ### Via GitHub Actions
 
-Creez un tag pour declencher une release :
+Create a tag to trigger a release:
 
 ```bash
 git tag -a v1.0.0 -m "Version 1.0.0"
 git push origin v1.0.0
 ```
 
-Ou lancez manuellement depuis l'onglet Actions > Build and Release > Run workflow.
+Or manually trigger from the Actions tab > Build and Release > Run workflow.
 
-### En local
+### Locally
 
 ```bash
 # Build Android APK
@@ -77,43 +77,43 @@ eas build --platform android --profile production
 # Build iOS
 eas build --platform ios --profile production
 
-# Build les deux
+# Build both
 eas build --platform all --profile production
 ```
 
-## Structure des profils de build
+## Build Profile Structure
 
-Le fichier `eas.json` contient 3 profils :
+The `eas.json` file contains 3 profiles:
 
-| Profil | Usage | Android | iOS |
-|--------|-------|---------|-----|
-| `development` | Dev avec hot reload | APK debug | Simulateur |
-| `preview` | Tests internes | APK | Simulateur |
-| `production` | Release publique | APK signe | IPA pour App Store |
+| Profile | Usage | Android | iOS |
+|---------|-------|---------|-----|
+| `development` | Dev with hot reload | Debug APK | Simulator |
+| `preview` | Internal testing | APK | Simulator |
+| `production` | Public release | Signed APK | App Store IPA |
 
-## Quotas EAS Build
+## EAS Build Quotas
 
-Le plan gratuit d'Expo inclut :
-- 30 builds iOS par mois
-- 30 builds Android par mois
-- Files d'attente partagees
+The free Expo plan includes:
+- 30 iOS builds per month
+- 30 Android builds per month
+- Shared queues
 
-Pour plus de builds ou des builds prioritaires, voir [expo.dev/pricing](https://expo.dev/pricing).
+For more builds or priority builds, see [expo.dev/pricing](https://expo.dev/pricing).
 
 ## Troubleshooting
 
-### Erreur "Not logged in"
+### "Not logged in" Error
 
 ```bash
 eas login
 ```
 
-### Erreur de credentials iOS
+### iOS Credentials Error
 
 ```bash
 eas credentials --platform ios
 ```
 
-### Build echoue
+### Build Failed
 
-Consultez les logs sur [expo.dev](https://expo.dev) dans l'onglet Builds du projet.
+Check the logs on [expo.dev](https://expo.dev) in the project's Builds tab.

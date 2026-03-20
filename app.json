@@ -3,7 +3,7 @@
     "name": "Les Petits Plats",
     "slug": "les-petits-plats",
     "version": "1.0.0",
-    "description": "Application de recettes de cuisine simple et elegante",
+    "description": "Simple and elegant recipe mobile app",
     "githubUrl": "https://github.com/NathanHallouin/les-petits-plats",
 
     "orientation": "portrait",
@@ -39,7 +39,7 @@
       "bundler": "metro",
       "name": "Les Petits Plats",
       "shortName": "Petits Plats",
-      "description": "Application de recettes de cuisine",
+      "description": "Recipe mobile app",
       "themeColor": "#f59e0b",
       "backgroundColor": "#f8fafc"
     },

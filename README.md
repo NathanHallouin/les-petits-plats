@@ -1,123 +1,123 @@
 # Les Petits Plats
 
-Application mobile de recettes de cuisine, simple et elegante. Recherchez parmi des centaines de recettes du quotidien, filtrez par temps de preparation, ustensiles ou appareils.
+A simple and elegant recipe mobile application. Search through hundreds of everyday recipes, filter by preparation time, utensils, or appliances.
 
 ![React Native](https://img.shields.io/badge/React_Native-0.84-blue?logo=react)
 ![Expo](https://img.shields.io/badge/Expo-55-black?logo=expo)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?logo=typescript)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Fonctionnalites
+## Features
 
-- Recherche de recettes par nom, ingredient ou description
-- Filtres avances (temps, ustensiles, appareils)
-- Interface moderne et responsive
-- Compatible iOS, Android et Web
-- Mode hors-ligne
+- Search recipes by name, ingredient, or description
+- Advanced filters (time, utensils, appliances)
+- Modern and responsive interface
+- Compatible with iOS, Android, and Web
+- Offline mode
 
-## Captures d'ecran
+## Screenshots
 
-| Accueil | Detail | Filtres |
-|---------|--------|---------|
+| Home | Detail | Filters |
+|------|--------|---------|
 | ![Home](assets/screenshots/home.png) | ![Detail](assets/screenshots/detail.png) | ![Filters](assets/screenshots/filters.png) |
 
 ## Installation
 
-### Prerequis
+### Prerequisites
 
 - Node.js 18+
-- npm ou yarn
+- npm or yarn
 - Expo CLI (`npm install -g expo-cli`)
 
-### Demarrage rapide
+### Quick Start
 
 ```bash
-# Cloner le repository
+# Clone the repository
 git clone https://github.com/NathanHallouin/les-petits-plats.git
 cd les-petits-plats
 
-# Installer les dependances
+# Install dependencies
 npm install
 
-# Lancer en mode developpement
+# Start development server
 npm start
 ```
 
-### Commandes disponibles
+### Available Commands
 
-| Commande | Description |
-|----------|-------------|
-| `npm start` | Lance le serveur de developpement Expo |
-| `npm run android` | Lance sur emulateur/device Android |
-| `npm run ios` | Lance sur simulateur/device iOS |
-| `npm run web` | Lance dans le navigateur |
-| `npm run lint` | Verifie le code avec Biome |
-| `npm run format` | Formate le code avec Biome |
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start Expo development server |
+| `npm run android` | Run on Android emulator/device |
+| `npm run ios` | Run on iOS simulator/device |
+| `npm run web` | Run in browser |
+| `npm run lint` | Check code with Biome |
+| `npm run format` | Format code with Biome |
 
-## Telecharger l'application
+## Download the App
 
 ### Android
 
-Telechargez la derniere version APK depuis la page [Releases](https://github.com/NathanHallouin/les-petits-plats/releases).
+Download the latest APK version from the [Releases](https://github.com/NathanHallouin/les-petits-plats/releases) page.
 
 ### iOS
 
-L'application iOS est disponible via TestFlight. Consultez la page [Releases](https://github.com/NathanHallouin/les-petits-plats/releases) pour les instructions.
+The iOS app is available via TestFlight. Check the [Releases](https://github.com/NathanHallouin/les-petits-plats/releases) page for instructions.
 
-## Builds et Releases
+## Builds and Releases
 
-Les builds iOS et Android sont automatises via GitHub Actions et EAS Build.
+iOS and Android builds are automated via GitHub Actions and EAS Build.
 
-### Creer une release
+### Create a Release
 
 ```bash
-# Creer un tag de version
+# Create a version tag
 git tag -a v1.0.0 -m "Version 1.0.0"
 git push origin v1.0.0
 ```
 
-Le workflow va automatiquement :
-1. Builder l'APK Android
-2. Builder l'IPA iOS
-3. Creer une release GitHub avec les artefacts
+The workflow will automatically:
+1. Build the Android APK
+2. Build the iOS IPA
+3. Create a GitHub release with the artifacts
 
-### Configuration requise
+### Required Configuration
 
-Pour activer les builds automatiques, suivez le guide [SETUP_RELEASES.md](SETUP_RELEASES.md).
+To enable automatic builds, follow the [SETUP_RELEASES.md](SETUP_RELEASES.md) guide.
 
-## Stack technique
+## Tech Stack
 
 - **Framework**: React Native + Expo
-- **Langage**: TypeScript
+- **Language**: TypeScript
 - **Styles**: NativeWind (Tailwind CSS)
 - **Navigation**: React Navigation
 - **Linting**: Biome
 - **CI/CD**: GitHub Actions + EAS Build
 
-## Structure du projet
+## Project Structure
 
 ```
 les-petits-plats/
-├── assets/              # Images, logos, icones
-├── components/          # Composants React
+├── assets/              # Images, logos, icons
+├── components/          # React components
 │   ├── Header.tsx
 │   ├── HomeScreen.tsx
 │   ├── RecipeCard.tsx
 │   ├── RecipeDetailScreen.tsx
 │   ├── RecipeFilters.tsx
 │   └── SearchBar.tsx
-├── data/                # Donnees des recettes
+├── data/                # Recipe data
 │   ├── recipes.ts
 │   └── recipes/
-├── App.tsx              # Point d'entree
-├── global.css           # Styles globaux
-└── tailwind.config.js   # Configuration Tailwind
+├── App.tsx              # Entry point
+├── global.css           # Global styles
+└── tailwind.config.js   # Tailwind configuration
 ```
 
-## Contribuer
+## Contributing
 
-Les contributions sont les bienvenues ! N'hesitez pas a ouvrir une issue ou une pull request.
+Contributions are welcome! Feel free to open an issue or pull request.
 
-## Licence
+## License
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

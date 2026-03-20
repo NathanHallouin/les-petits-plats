@@ -1,11 +1,47 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "Les Petits Plats",
+    "slug": "les-petits-plats",
     "version": "1.0.0",
+    "description": "Application de recettes de cuisine simple et elegante",
+    "githubUrl": "https://github.com/NathanHallouin/les-petits-plats",
+
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f59e0b"
+    },
+
+    "assetBundlePatterns": ["**/*"],
+
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lespetitsplats.app",
+      "buildNumber": "1"
+    },
+
+    "android": {
+      "package": "com.lespetitsplats.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#f59e0b"
+      },
+      "permissions": []
+    },
 
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "name": "Les Petits Plats",
+      "shortName": "Petits Plats",
+      "description": "Application de recettes de cuisine",
+      "themeColor": "#f59e0b",
+      "backgroundColor": "#f8fafc"
     },
 
     "experiments": {
@@ -14,24 +50,9 @@
 
     "plugins": [],
 
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-
-    "userInterfaceStyle": "light",
-
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": ["**/*"],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "extra": {
+      "eas": {
+        "projectId": "les-petits-plats"
       }
     }
   }
